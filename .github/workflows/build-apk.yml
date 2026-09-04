@@ -29,8 +29,9 @@ jobs:
         run: |
           sudo apt-get update
           sudo apt-get install -y \
-            git zip unzip autoconf libtool pkg-config \
+            git zip unzip autoconf automake autopoint libltdl-dev libtool libtool-bin pkg-config \
             zlib1g-dev libncurses5-dev libncursesw5-dev \
+            build-essential gcc g++ make ant lbzip2 \
             libtinfo6 cmake libffi-dev libssl-dev \
             automake autopoint gettext
 
