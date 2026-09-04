@@ -50,6 +50,11 @@ jobs:
           restore-keys: |
             buildozer-${{ runner.os }}-
 
+      - name: Clean stale Android build state
+        run: |
+          rm -rf .buildozer/android/platform/python-for-android
+          rm -rf .buildozer/android/platform/build-*
+
       - name: Build debug APK
         env:
           BUILDOZER_WARN_ON_ROOT: "0"
